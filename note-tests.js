@@ -1,10 +1,12 @@
 // note-test.js
 
-text= "blah blah"
+james= "blah blah";
+richard="blah blah blah blah";
 
-function noteIncludesText() {
-    var note = new Note();
-    assert.isTrue(note.content === text);
+function noteIncludesText(contentText) {
+    var note = new Note(contentText);
+    assert.isTrue(note.content === contentText);
+    console.log("Your note content is: " + note.content);
   };
   
-  noteIncludesText(text);
+  noteIncludesText(richard);

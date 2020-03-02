@@ -1,7 +1,7 @@
 // note.js
 
 (function(exports) {
-    function Note() {
+    function Note(text) {
       this.content = text;
     };
   
