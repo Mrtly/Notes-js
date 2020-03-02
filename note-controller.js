@@ -10,6 +10,6 @@
     exports.NoteListController = NoteListController;
 })(this);
 
-var noteList = new NoteList()
+var noteList = new NoteList();
 var noteListController = new NoteListController(noteList);
-noteListController.updateContent()
+noteListController.updateContent();
