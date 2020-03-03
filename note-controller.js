@@ -1,7 +1,7 @@
 (function(exports){
     function NoteListController(noteListModel) {
         this.app = document.getElementById('app');
-        noteList.createNote("Favourite drink: kombucha")
+        noteListModel.createNote("Favourite Drink: Kombucha")
         this.view = new NoteListView(noteListModel)
     }
     NoteListController.prototype.updateContent = function(){
@@ -10,6 +10,6 @@
     exports.NoteListController = NoteListController;
 })(this);
 
-var noteList = new NoteList();
-var noteListController = new NoteListController(noteList);
-noteListController.updateContent();
+// var noteList = new NoteList();
+// var noteListController = new NoteListController(noteList);
+// noteListController.updateContent();
