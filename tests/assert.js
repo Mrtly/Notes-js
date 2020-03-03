@@ -5,6 +5,6 @@ var assert = {
       if (!assertionToCheck) {
         throw new Error("Assertion FAILED: " + assertionToCheck + " is not truthy");
       }
-      else console.log("TEST IS PASSING OMG YAY")
+      else console.log("%cTEST IS PASSING", "font-family:monospace;color:green;font-size:1rem")
     }
   };
