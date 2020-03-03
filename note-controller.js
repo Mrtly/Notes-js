@@ -24,9 +24,10 @@
     NoteListController.prototype.getContent = function(noteID){
 
         for (var i = 0; i < this.view.content.content.length; i++) {
+            console.log(this.view.content.content[i].id)
             if(noteID == this.view.content.content[i].id){
                 return this.view.content.content[i].content
-            }else {return "No matches"}
+            }
         }
     }
 
