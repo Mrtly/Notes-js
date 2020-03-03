@@ -28,3 +28,15 @@ function noteListCanCreateAndStoreNote() {
 }
 
 noteListCanCreateAndStoreNote();
+
+function noteListAssignsIDs() {
+    console.log("noteListAssignsIDs");
+    var noteList = new NoteList();
+    noteList.createNote("Test Text");
+    noteList.createNote("Second Text");
+    noteList.createNote("Third Text");
+    assert.isTrue(noteList.content.length === 3);
+    assert.isTrue(noteList.content[2].id === 2)
+}
+
+noteListAssignsIDs();
