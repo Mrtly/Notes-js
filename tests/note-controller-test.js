@@ -13,7 +13,8 @@ function showsHTMLwith20charLimit() {
     var noteList = new NoteList();
     var noteListController = new NoteListController(noteList);
     noteListController.updateContent();
-    assert.isTrue(noteListController.app.innerHTML === "<ul><li><div>Favourite Drink: Kom...</div></li></ul>")
+    console.log(noteListController.app.innerHTML)
+    assert.isTrue(noteListController.app.innerHTML === '<ul><li><div><a href="#notes/0">Favourite Drink: Kom...</a></div></li></ul>')
 }
 
 showsHTMLwith20charLimit();
