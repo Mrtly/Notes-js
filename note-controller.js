@@ -1,10 +1,14 @@
 (function (exports) {
     function NoteListController(noteListModel) {
         this.app = document.getElementById('app');
-        noteListModel.createNote("Favourite Drink: Kombucha");
-        noteListModel.createNote("Its a whole new Note");
+        this.noteList = noteListModel
         this.view = new NoteListView(noteListModel)
+        noteListModel.createNote("Favourite Drink: Kombucha");
     }
+    NoteListController.prototype.addNote = function(text){
+        this.noteList.createNote(text)
+    }
+
 
     NoteListController.prototype.updateContent = function () {
         this.app.innerHTML = this.view.listHTML()
@@ -37,15 +41,17 @@
             .getElementById("app")
             .innerHTML = this.getContent(noteID);
     };
-    NoteListController.prototype.createNote = function(text){
+    NoteListController.prototype.createNote = function (text) {
         this.view.content.createNote(text)
-    }
+    };
     NoteListController.prototype.listenForSubmit = function () {
-        form = document.getElementById("new_note")
-        form.addEventListener("submit", (event) =>{
+        form = document.getElementById("new_note");
+        form.addEventListener("submit", (event) => {
+            console.log(event.target)
             event.preventDefault();
-        })
-        console.dir(form)
+            this.addNote(event.target.elements[0].value);
+            this.updateContent();
+        });
     };
 
     exports.NoteListController = NoteListController;
@@ -55,6 +61,6 @@ let noteList = new NoteList();
 let controller = new NoteListController(noteList);
 // controller.createNote("Favourite Drink: Kombucha");
 // controller.createNote("Its a whole new Note");
-controller.updateContent()
+controller.updateContent();
 controller.listenForSubmit();
 controller.makeUrlChangeShowNoteForCurrentPage();

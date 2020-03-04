@@ -9,11 +9,10 @@ canMakeANoteController();
 
 
 function showsHTMLwith20charLimit() {
-    console.log("showsHTML");
+    console.log("showsHTMLwith20charLimit");
     var noteList = new NoteList();
     var noteListController = new NoteListController(noteList);
     noteListController.updateContent();
-    console.log(noteListController.app.innerHTML)
     assert.isTrue(noteListController.app.innerHTML === '<ul><li><div><a href="#notes/0">Favourite Drink: Kom...</a></div></li></ul>')
 }
 
