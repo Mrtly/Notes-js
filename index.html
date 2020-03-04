@@ -7,6 +7,10 @@
 
 <h1> * Notes * </h1>
 <div id="app">hello</div>
+<textarea rows="4" cols="50" name="create_note" form="new_note" placeholder="Write a new Note..."></textarea>
+<form action="notes/new" id="new_note" method="post">
+    <input type="submit" value="Submit">
+</form>
 
 <script src="tests/assert.js"></script>
 <script src="note.js"></script>
