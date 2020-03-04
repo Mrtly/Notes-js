@@ -10,16 +10,16 @@ As part of this primary goal, a sub-goal should be that we are able to explain a
 ##### Specification
 
 a user can:
-- [ ] see a list of the notes; each note is abbreviated to the first 20 characters
+- [x] see a list of the notes; each note is abbreviated to the first 20 characters
+- [x] see the full text of an individual note on its own page
 - [ ] create a new note
-- [ ] see the full text of an individual note on its own page
 <br>
 
-* notes do not need to be permanently stored; if the user refreshes their web page, they'll lose their notes
+* notes are not permanently stored; if the user refreshes their web page, they'll lose their notes
 
 #### Built with
 
-JavaScript, using TDD
+vanilla JavaScript, following TDD
 
 ##### Run
 
@@ -27,13 +27,14 @@ JavaScript, using TDD
 
 ##### Test
 
-open index.html in a browser and open the console, that's where the test results are
+the test results live in the console! <br>
+(open devtools, go to console)
 
 ##### Notes
-Week 7 @ Makers Academy: <br>
-Build a front-end app in Javascript <br>
-Work competently in Javascript <br>
-Reason about asynchronous behaviour in Javascript
+Week 7 @ Makers Academy:
+* Build a front-end app in Javascript 
+* Work competently in Javascript 
+* Reason about asynchronous behaviour in Javascript
 
 #### Collaborators
 [Myrtle](https://github.com/Mrtly), [Richard](https://github.com/richardpattinson)
