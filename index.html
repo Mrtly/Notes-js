@@ -8,12 +8,14 @@
 
 <h1> * Notes * </h1>
 <div id="app">hello</div>
+
 <textarea rows="4" cols="50" name="create_note" form="new_note" placeholder="Write a new Note..."></textarea>
 <form action="notes/new" id="new_note" method="post">
-    <input type="submit" value="Submit">
+    <input id="button" type="submit" value="Submit"/>
 </form>
 
-<footer><a href="/index.html">back to index</a></footer>
+<footer>
+    <button id="refreshbutton" onClick="window.location.reload();">refresh page</button> <i>..& lose your notes</i></footer>
 <script src="tests/assert.js"></script>
 <script src="note.js"></script>
 <script src="note-list-model.js"></script>

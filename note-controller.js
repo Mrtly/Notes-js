@@ -47,10 +47,12 @@
     NoteListController.prototype.listenForSubmit = function () {
         form = document.getElementById("new_note");
         form.addEventListener("submit", (event) => {
-            console.log(event.target)
+            console.log(event.target);
             event.preventDefault();
             this.addNote(event.target.elements[0].value);
             this.updateContent();
+            document.getElementById("new_note").reset();
+
         });
     };
 
