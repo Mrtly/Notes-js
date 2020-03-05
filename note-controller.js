@@ -49,6 +49,8 @@
             event.preventDefault();
             this.addNote(event.target.elements[0].value);
             this.updateContent();
+            document.getElementById("new_note").reset();
+
         });
     };
 

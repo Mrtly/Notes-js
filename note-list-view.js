@@ -16,7 +16,5 @@
         return newarr.join('')
     };
 
-
     exports.NoteListView = NoteListView;
 })(this);
-
