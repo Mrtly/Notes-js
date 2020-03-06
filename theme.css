@@ -63,7 +63,8 @@ textarea {
 footer {
     text-align: center;
     font-size: 1.2em;
-    margin-top: 2em
+    margin-top: 2em;
+    line-height: 2em;
 }
 
 button,
@@ -102,7 +103,6 @@ button:hover,
 }
 
 li {
-    font-family: 'Indie Flower';
     margin: 0.7em;
     text-align: center;
     width: 275px;
@@ -122,7 +122,7 @@ li {
 #f2 {
     font-size: 0.8em;
     padding-top: 0.5em;
-    color:#edca06;
+    /* color:#edca06; */
     background-color: #ffffffb3;
     padding: 1em;
 }
@@ -131,5 +131,39 @@ li {
     letter-spacing: 2px;
     padding: 5px;
     color:  #0d85a0;
-    border-bottom: 4px dotted #edca06;
+    border-bottom: 4px dotted #0d85a0;
+}
+
+:focus {
+    outline: 0;
+}
+
+@media only screen and (max-device-width: 414px) {
+    html {margin: 0; padding: 0;
+        height: 100vh;
+        font-size: 3rem;
+        padding-top: 3em;
+        }
+        body { align-content: center;
+background-image: repeating-linear-gradient(white 5px, white 20px, teal 21px);
+           width: 100vw;
+        }
+        .container {
+            padding: 0em;
+        }
+        ul {margin-left: 1.8em;}
+        li {font-size: 0.8em;
+            width: 320px;
+         margin-top: 0;
+        }
+        #noteinput {
+            margin-top: 1em;
+            margin-bottom: 1em
+        }
+     
+    footer {line-height: 2em;
+        font-size: 1.1em;
+        bottom: 1px;
+        max-width: 95%;
+    }
 }

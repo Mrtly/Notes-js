@@ -21,6 +21,10 @@ a user can:
 
 vanilla JavaScript, following TDD
 
+##### Visit
+
+[vanilla-notes.surge.sh](http://vanilla-notes.surge.sh/)
+
 ##### View
 
 <img src="notes.png" width="700">
