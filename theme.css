@@ -1,53 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan|Indie+Flower&display=swap');
 html {
-    padding: 0.6em;
-    font-family: 'Lucida Grande', Verdana, sans-serif;
-    font-size: 24px;
-    overscroll-behavior: none
+    font-family: 'Spartan', Verdana, sans-serif;
+    font-size: 20px;
+    color: #0a2d8f;
+    align-content: center
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: repeating-linear-gradient(white 0px, white 28px, teal 29px);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 1em 1px;
+    overscroll-behavior: none;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.container {
+    padding: 1em
 }
 
 ul {
-    list-style-type: square;
+    list-style-type: none;
+    padding: 0
 }
 
 a {
-    border-bottom: 1px #0a8f86 solid;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.3em
+    padding: 0.2em
 }
 
-a:visited, a:active {
-    color: #0a8f86
+a:visited,
+a:active {
+    color: #0b40d3
 }
 
 a:hover {
     background-color: #fce85299
 }
 
-textarea {
-    font-size: 0.7em
+#noteinput {
+    text-align: center;
+    margin-top: 1.6em;
+    font-size: 1.2em;
 }
 
-input {
-    font-size: 2em;
-    font-family: verdana
+textarea {
+    font-size: 0.6em;
+    background-color: #ffffffe9;
+    margin-bottom: 0.5em
+}
+
+#refresh {
+    font-size: 0.8em;
+    margin-left: 1em;
 }
 
 footer {
-    color: #0a8f86;
-    font-size: 0.7em;
-    margin-top: 5em
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 2em
+}
+
+button,
+#button {
+    color: whitesmoke;
+    font-family: 'Spartan';
+    border-radius: 10px;
+    background-color: #0d85a0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px lightgrey solid;
+    padding: 0.4em 0.5em;
 }
 
 button {
-    background-color: #fce85299;
-    font-size: 0.8rem;
-    text-decoration: none;
-    border: 1px lightgrey solid;
-    padding: 0.3em 0.4em
+    font-size: 1.1em;
+    background-color: white;
+    border: 2px solid #0d85a0;
+    color: #0d85a0;
+
 }
 
-button:hover {
-    background-color: #0a8f8699
+
+button:hover,
+#button:hover {
+    cursor: pointer;
 }
 
+
+
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 4px 2px;
+}
+
+li {
+    font-family: 'Indie Flower';
+    margin: 0.7em;
+    text-align: center;
+    width: 275px;
+    height: 210px;
+    padding-top: 2em;
+    border: 1px solid #E8E8E8;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    color: darkblue;
+    border-bottom-right-radius: 60px 10px; //thats the folding corner
+    display: inline-block;
+    background: #ffff88;
+    box-shadow: 1px 1px 2px gray;
+}
+
+#f2 {
+    font-size: 0.8em;
+    padding-top: 0.5em;
+    color:#edca06;
+    background-color: #ffffffb3;
+    padding: 1em;
+}
+
+#f2 a , #f2 a:visited, #f2 a:active{
+    letter-spacing: 2px;
+    padding: 5px;
+    color:  #0d85a0;
+    border-bottom: 4px dotted #edca06;
+}
