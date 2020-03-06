@@ -3,7 +3,6 @@
         this.app = document.getElementById('app');
         this.noteList = noteListModel
         this.view = new NoteListView(noteListModel)
-        noteListModel.createNote("Favourite Drink: Kombucha");
     }
     NoteListController.prototype.addNote = function(text){
         this.noteList.createNote(text)
@@ -47,7 +46,6 @@
     NoteListController.prototype.listenForSubmit = function () {
         form = document.getElementById("new_note");
         form.addEventListener("submit", (event) => {
-            console.log(event.target);
             event.preventDefault();
             this.addNote(event.target.elements[0].value);
             this.updateContent();
