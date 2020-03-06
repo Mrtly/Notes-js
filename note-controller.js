@@ -44,7 +44,7 @@
     NoteListController.prototype.showNote = function (noteID) {
         document
             .getElementById("app")
-            .innerHTML = this.getContent(noteID);
+            .innerHTML = `<ul><li><div>${this.getContent(noteID)}</div></li></ul>`;
     };
     NoteListController.prototype.createNote = function (text) {
         this.view.content.createNote(text)
