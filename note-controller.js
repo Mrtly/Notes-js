@@ -1,12 +1,13 @@
 (function (exports) {
     function NoteListController(noteListModel) {
         this.app = document.getElementById('app');
-        this.noteList = noteListModel
+        this.noteList = noteListModel;
         this.view = new NoteListView(noteListModel)
     }
-    NoteListController.prototype.addNote = function(text){
+
+    NoteListController.prototype.addNote = function (text) {
         this.noteList.createNote(text)
-    }
+    };
 
 
     NoteListController.prototype.updateContent = function () {
@@ -14,7 +15,12 @@
     };
 
     NoteListController.prototype.makeUrlChangeShowNoteForCurrentPage = function () {
-        window.addEventListener("hashchange", () => this.showNoteForCurrentPage());
+        window.addEventListener("hashchange", (event) => {
+            if (event.newURL.split('#')[1]) {
+                this.showNoteForCurrentPage()
+            }
+
+        });
     };
 
     NoteListController.prototype.showNoteForCurrentPage = function () {
@@ -44,7 +50,7 @@
         this.view.content.createNote(text)
     };
     NoteListController.prototype.listenForSubmit = function () {
-        form = document.getElementById("new_note");
+        let form = document.getElementById("new_note");
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             this.addNote(event.target.elements[0].value);
@@ -53,14 +59,17 @@
 
         });
     };
+    NoteListController.prototype.backToNotes = function () {
+        location.hash = '#';
+        this.updateContent();
+    };
 
     exports.NoteListController = NoteListController;
 })(this);
 
 let noteList = new NoteList();
 let controller = new NoteListController(noteList);
-// controller.createNote("Favourite Drink: Kombucha");
-// controller.createNote("Its a whole new Note");
 controller.updateContent();
 controller.listenForSubmit();
 controller.makeUrlChangeShowNoteForCurrentPage();
+
