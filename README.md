@@ -12,7 +12,7 @@ As part of this primary goal, a sub-goal should be that we are able to explain a
 a user can:
 - [x] see a list of the notes; each note is abbreviated to the first 20 characters
 - [x] see the full text of an individual note on its own page
-- [ ] create a new note
+- [x] create a new note
 <br>
 
 * notes are not permanently stored; if the user refreshes their web page, they'll lose their notes
@@ -20,6 +20,10 @@ a user can:
 #### Built with
 
 vanilla JavaScript, following TDD
+
+##### View
+
+<img src="notes.png" width="500">
 
 ##### Run
 
@@ -37,5 +41,5 @@ Week 7 @ Makers Academy:
 * Reason about asynchronous behaviour in Javascript
 
 #### Collaborators
-[Myrtle](https://github.com/Mrtly), [Richard](https://github.com/richardpattinson)
+[Myrtle](https://github.com/Mrtly) & [Richard](https://github.com/richardpattinson)
  

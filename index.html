@@ -5,17 +5,24 @@
     <link rel="stylesheet" type="text/css" href="theme.css">
 </head>
 <body>
-
-<h1> * Notes * </h1>
+<div class="container">
 <div id="app">hello</div>
 
+<div id="noteinput">
 <textarea rows="4" cols="50" name="create_note" form="new_note" placeholder="Write a new Note..."></textarea>
 <form action="notes/new" id="new_note" method="post">
-    <input id="button" type="submit" value="Submit"/>
-</form>
+    <input id="button" type="submit" value="post"/>
+</form></div>
+
+<div id="refresh"><button id="refreshbutton" onClick="window.location.reload();">refresh page</button>
+<i>..& lose your notes</i>
+</div>
+
 
 <footer>
-    <button id="refreshbutton" onClick="window.location.reload();">refresh page</button> <i>..& lose your notes</i></footer>
+ <span id="f2">built by <a href="https://github.com/Mrtly" target="_blank">Mrtly</a>& <a href="https://github.com/richardpattinson" target="_blank">Richard</a> @ <a href="https://makers.tech" target="_blank">Makers Academy</a></span>
+</footer>
+</div>
 <script src="tests/assert.js"></script>
 <script src="note.js"></script>
 <script src="note-list-model.js"></script>
