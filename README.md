@@ -27,6 +27,7 @@ vanilla JavaScript, following TDD
 
 ##### View
 
+<img src="notes1.png" width="300">
 <img src="notes.png" width="300">
 
 ##### Run
